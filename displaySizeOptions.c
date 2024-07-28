@@ -1,7 +1,7 @@
 // display_size_options.c
 
 #include <stdio.h>
-#include "coffee.h"
+#include "cofee.h"
 
 void display_size_options(Beverage beverage) {
     printf("\n%s: %s\n", beverage.name, beverage.description);

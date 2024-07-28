@@ -1,0 +1,1 @@
+Beverage: Tea, Size: s, Sugar: y, Cups: 5, Total Price: Rs125.00

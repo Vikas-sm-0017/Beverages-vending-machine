@@ -1,7 +1,7 @@
 // display_menu.c
 
 #include <stdio.h>
-#include "coffee.h"
+#include "cofee.h"
 
 void display_menu() {
     printf("\nBeverages Vending Machine\n");

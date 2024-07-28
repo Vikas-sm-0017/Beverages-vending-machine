@@ -1,7 +1,7 @@
 // coffee.h
 
-#ifndef COFFEE_H
-#define COFFEE_H
+#ifndef COFEE_H
+#define COFEE_H
 
 // Define a structure for beverages
 typedef struct {

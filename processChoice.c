@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "coffee.h"
+#include "cofee.h"
 
 void log_choice_to_file(Beverage beverage, int cups) {
     FILE *file = fopen("beverage_log.txt", "a"); // Open file for appending

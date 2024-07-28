@@ -2,7 +2,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "coffee.h"
+#include "cofee.h"
+#include "displaymenu.c"
+#include "displaySizeOptions.c"
+#include "processChoice.c"
 
 int main() {
     int choice;
