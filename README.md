@@ -1,17 +1,13 @@
-Beverages Vending Machine
-This is a simple command-line C program simulating a beverages vending machine. Users can select from three types of beverages (Coffee, Tea, and Soda) and choose their sizes. The program displays the price of the selected beverage and allows users to confirm their selection before proceeding.
+# Beverages Vending Machine
 
-Features
-Menu Options:
-Coffee
-Tea
-Soda
-Exit
-Size Options:
-Small
-Medium
-Large
-Prices:
-Coffee: Small - Rs 30, Medium - Rs 40, Large - Rs 50
-Tea: Small - Rs 25, Medium - Rs 35, Large - Rs 45
-Soda: Small - Rs 20, Medium - Rs 30, Large - Rs 40
+This project is a simple command-line Beverages Vending Machine implemented in C. It allows users to select from a variety of beverages, choose sizes, specify sugar preferences for applicable drinks, and handles payment and transaction logging.
+
+## Features
+
+- Offers five types of beverages: Coffee, Tea, Soda, Apple Juice, and Lassi.
+- Allows size selection (Small, Medium, Large) with corresponding pricing.
+- Provides sugar option for Coffee and Tea.
+- Calculates total price based on the number of cups.
+- Processes payment and calculates change.
+- Logs each transaction to a file.
+- Allows viewing of transaction history.
