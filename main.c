@@ -1,46 +1,71 @@
-#include <stdio.h>
-#include "cofee.h"
-#include "displaymenu.c"
-#include "displaySizeOptions.c"
-#include "processChoice.c"
+// main.c
 
-int main()
-{
+#include <stdio.h>
+#include <stdlib.h>
+#include "coffee.h"
+
+int main() {
     int choice;
     char continue_choice;
-    char confirm_choice;
-    float price;
 
-    do
-    {
-        displayMenu();
-        scanf("%d", &choice);
-        processChoice(choice, &price);
+    // Create an array of beverages
+    Beverage *beverages = (Beverage *)malloc(5 * sizeof(Beverage));
 
-        // Display price and ask for confirmation
-        if (price > 0.0)
-        {
-            printf("Price: Rs%.2f\n", price);
-            printf("Do you want to confirm this choice? (y/n): ");
-            scanf(" %c", &confirm_choice);
+    // Initialize the beverages
+    beverages[0].name = "Coffee";
+    beverages[0].description = "A hot drink made from roasted coffee beans.";
+    beverages[0].small_price = 30.0;
+    beverages[0].medium_price = 40.0;
+    beverages[0].large_price = 50.0;
 
-            if (confirm_choice == 'y' || confirm_choice == 'Y')
-            {
-                // Proceed with confirmed choice
-                printf("You have confirmed your selection.\n");
-            }
-            else
-            {
-                printf("You chose to correct your selection.\n");
-            }
+    beverages[1].name = "Tea";
+    beverages[1].description = "A soothing hot drink made from cured or fresh tea leaves.";
+    beverages[1].small_price = 25.0;
+    beverages[1].medium_price = 35.0;
+    beverages[1].large_price = 45.0;
+
+    beverages[2].name = "Soda";
+    beverages[2].description = "A refreshing carbonated soft drink.";
+    beverages[2].small_price = 20.0;
+    beverages[2].medium_price = 30.0;
+    beverages[2].large_price = 40.0;
+
+    beverages[3].name = "Apple Juice";
+    beverages[3].description = "A sweet beverage made from pressed apples.";
+    beverages[3].small_price = 35.0;
+    beverages[3].medium_price = 45.0;
+    beverages[3].large_price = 55.0;
+
+    beverages[4].name = "Lassi";
+    beverages[4].description = "A traditional yogurt-based drink from India.";
+    beverages[4].small_price = 40.0;
+    beverages[4].medium_price = 50.0;
+    beverages[4].large_price = 60.0;
+
+    do {
+        display_menu();
+
+        choice = get_valid_integer_input("Enter your choice: ");
+
+        if (choice >= 1 && choice <= 5) {
+            process_choice(beverages, choice);
+        } else if (choice == 6) {
+            view_transaction_history();
+        } else if (choice == 7) {
+            printf("Exiting the vending machine.\n");
+            free(beverages); // Free the allocated memory
+            return 0;
+        } else {
+            printf("Invalid choice. Please enter a number between 1 and 7.\n");
         }
 
         // Ask if user wants to continue
-        printf("\nDo you want to continue? (y/n): ");
-        scanf(" %c", &continue_choice);
-    } while(continue_choice == 'y' || continue_choice == 'Y');
+        continue_choice = get_valid_char_input("\nDo you want to continue? (y/n): ", "yn");
+
+    } while (continue_choice == 'y');
 
     printf("Exiting the vending machine.\n");
+    free(beverages); // Free the allocated memory
 
     return 0;
 }
