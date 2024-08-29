@@ -1,6 +1,5 @@
 // display_menu.c
 
-#include <stdio.h>
 #include "cofee.h"
 
 void display_menu() {

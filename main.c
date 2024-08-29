@@ -1,11 +1,11 @@
 // main.c
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "cofee.h"
 #include "displaymenu.c"
 #include "displaySizeOptions.c"
 #include "processChoice.c"
+
 
 int main() {
     int choice;
@@ -47,27 +47,20 @@ int main() {
 
     do {
         display_menu();
-
         choice = get_valid_integer_input("Enter your choice: ");
-
-        if (choice >= 1 && choice <= 5) {
-            process_choice(beverages, choice);
-        } else if (choice == 6) {
-            view_transaction_history();
-        } else if (choice == 7) {
-            printf("Exiting the vending machine.\n");
+        if (choice == 7) {
+            printf("Thank you for using the vending machine.\n");
             free(beverages); // Free the allocated memory
             return 0;
-        } else {
-            printf("Invalid choice. Please enter a number between 1 and 7.\n");
         }
+        process_choice(choice, beverages);
 
         // Ask if user wants to continue
         continue_choice = get_valid_char_input("\nDo you want to continue? (y/n): ", "yn");
 
     } while (continue_choice == 'y');
 
-    printf("Exiting the vending machine.\n");
+    printf("Thank you for using the vending machine.\n");
     free(beverages); // Free the allocated memory
 
     return 0;

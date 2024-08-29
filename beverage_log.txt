@@ -1,3 +1,9 @@
 Beverage: Tea, Size: s, Sugar: y, Cups: 5, Total Price: Rs125.00
 Beverage: Apple Juice, Size: s, Sugar: n, Cups: 7, Total Price: Rs245.00
 Beverage: Apple Juice, Size: s, Sugar: n, Cups: 7, Total Price: Rs245.00
+Beverage: Soda, Size: s, Sugar: n, Cups: 3, Total Price: Rs60.00
+Beverage: Tea, Size: s, Sugar: y, Cups: 2, Total Price: Rs50.00
+Beverage: Tea, Size: s, Sugar: y, Cups: 2, Total Price: Rs50.00
+Beverage: Soda, Size: s, Sugar: n, Cups: 1, Total Price: Rs20.00
+Beverage: Coffee, Size: s, Sugar: y, Cups: 1, Total Price: Rs30.00
+Beverage: Coffee, Size: s, Sugar: y, Cups: 1, Total Price: Rs30.00
